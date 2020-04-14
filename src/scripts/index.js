@@ -1,4 +1,5 @@
-import '../styles/index.scss';
+import '../styles/index.sass';
+import './pace.min.js';
 
 console.log('webpack starterkit');
 
@@ -10,14 +11,14 @@ function pageTransition() {
     duration: 0.5,
     scaleY: 1,
     transformOrigin: 'bottom left',
-    stagger: 0.2
+    stagger: 0.2,
   });
   tl.to('ul.transition li', {
     duration: 0.5,
     scaleY: 0,
     transformOrigin: 'bottom left',
     stagger: 0.1,
-    delay: 0.1
+    delay: 0.1,
   });
 }
 
@@ -27,13 +28,13 @@ function contentAnimation() {
     duration: 1,
     y: -20,
     autoAlpha: 0,
-    delay: 0.3
+    delay: 0.3,
   });
 }
 
 function delay(n) {
   n = n || 2000;
-  return new Promise(done => {
+  return new Promise((done) => {
     setTimeout(() => {
       done();
     }, n);
@@ -59,7 +60,7 @@ barba.init({
 
       async once(data) {
         contentAnimation();
-      }
-    }
-  ]
+      },
+    },
+  ],
 });
