@@ -1,0 +1,168 @@
+.panels
+  display: flex
+
+.panel
+  position: relative
+
+  overflow: hidden
+
+  width: 25%
+  height: 100vh
+
+  cursor: pointer
+  transition: .3s all ease
+
+  &:hover
+    width: 30%
+
+    .panel__img
+      opacity: 1
+
+.panel__img
+  width: 100%
+  height: 100%
+
+  transition: .3s all ease
+
+  opacity: .7
+
+  object-fit: cover
+
+  &--large
+    visibility: hidden
+
+    width: 100%
+    height: 100%
+
+    opacity: 0
+
+    object-fit: cover
+
+.panel__meta
+  position: absolute
+  right: -60px
+  bottom: 100px
+
+  transform: rotate(-90deg)
+
+  h4
+    letter-spacing: 1px
+    text-transform: uppercase
+
+    font-family: Tusker-Grotesk-3500
+    font-size: 2.3rem
+
+  h3
+    display: block
+
+    width: 240px
+
+    letter-spacing: 1px
+
+    font-family: Tusker-Grotesk-4500
+    font-size: 2.9rem
+
+.panel--expanded
+  flex: 8
+
+  &:hover
+    flex: 8
+
+// .panel
+
+//   &:nth-child(1)
+//     width: 140%
+
+//     .panel__img--large
+//       visibility: visible
+
+//       transform: translateY(-101%)
+
+//       opacity: 1
+
+.panel__stats span
+  display: flex !important
+
+.panel__desc
+  position: absolute
+  top: 50%
+  right: 0
+  left: 0
+
+  display: inline-block
+  visibility: hidden
+
+  margin: 0 auto
+  margin-left: 9.2rem
+
+  transform: translateY(-50%)
+
+  h1
+    display: block
+
+    margin-bottom: 15px
+
+  h1 span
+    text-transform: uppercase
+
+    background: -webkit-linear-gradient(-90deg, rgba(255,255,255,1) 40%, rgba(174,179,183,1) 100%)
+    -webkit-background-clip: text
+    text-shadow: 0 0 24px rgba(255, 255, 255, 0.14)
+
+    font-size: 8.4rem
+
+    -webkit-text-fill-color: transparent
+
+  h2
+    margin-left: 2px
+
+    letter-spacing: 7.2px
+    text-transform: uppercase
+
+    opacity: .6
+
+    font-family: 'Tusker-Grotesk-3500'
+    font-size: 2.1rem
+
+  p
+    max-width: 408px
+    margin-bottom: 18px
+
+    font-size: 14px
+    line-height: 1.6
+
+.panel__stat
+  margin-right: 4.5rem
+
+  p
+    margin-top: 0
+    margin-bottom: 5px
+
+    font-family: Avenir
+    font-size: 15px
+    font-weight: 500
+
+  h4
+    display: block
+
+    margin-bottom: 0
+
+    text-shadow: 0 0 14px rgba(255,255,255,0.15)
+
+    font-family: Avenir
+    font-size: 3.2rem
+    font-weight: 500
+
+  small
+    opacity: 0.7
+    color: #C5C9CC
+
+    font-size: 1.4rem
+
+.block-animate
+  overflow: hidden
+
+  span
+    display: inline-block
+
+    transform: translateY(110%)

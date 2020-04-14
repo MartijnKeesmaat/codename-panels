@@ -10,6 +10,8 @@ html
   -moz-osx-font-smoothing: grayscale
 
 body
+  margin: 0
+
   background: #000
 
 ::selection
@@ -49,3 +51,42 @@ hr,
 
 figure
   margin: 0
+
+.camera-trigger
+  position: fixed
+  bottom: 30px
+  left: 94px
+
+  display: flex
+  align-items: center
+  justify-content: center
+
+  cursor: pointer
+  transition: .3s all ease
+  transform: translateY(200px)
+
+  img:first-child
+    animation: rotate infinite ease 10s
+
+  img:last-child
+    position: absolute
+    top: 50%
+    right: 0
+    left: 0
+
+    margin: 0 auto
+
+    transform: translateY(-50%)
+
+  &:hover
+    opacity: .7
+
+@keyframes rotate
+  0%
+    transform: rotate(0deg)
+
+  50%
+    transform: rotate(360deg)
+
+  100%
+    transform: rotate(0deg)

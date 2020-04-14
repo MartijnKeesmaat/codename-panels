@@ -1,5 +1,6 @@
 import '../styles/index.sass';
 import './pace.min.js';
+import './panels.js';
 
 console.log('webpack starterkit');
 
@@ -24,12 +25,12 @@ function pageTransition() {
 
 function contentAnimation() {
   var tl = gsap.timeline();
-  tl.from('main', {
-    duration: 1,
-    y: -20,
-    autoAlpha: 0,
-    delay: 0.3,
-  });
+  // tl.from('main', {
+  //   duration: 1,
+  //   y: -20,
+  //   autoAlpha: 0,
+  //   delay: 0.3,
+  // });
 }
 
 function delay(n) {
