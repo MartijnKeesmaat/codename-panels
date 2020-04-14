@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="165px" height="41px" viewBox="0 0 165 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Jonatan Pie Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <text id="text-1" font-family="GoldenPlains, Golden Plains - Demo" font-size="29" font-weight="normal" letter-spacing="2.15477824" fill="#FFFFFF">
+            <tspan x="9" y="24">Jonatan Pie</tspan>
+        </text>
+        <filter x="-7.1%" y="-20.7%" width="111.0%" height="162.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="1">
+        <g id="Jonatan-Pie-Copy" fill="#FFFFFF">
+            <use filter="url(#filter-2)" xlink:href="#text-1"></use>
+            <use xlink:href="#text-1"></use>
+        </g>
+    </g>
+</svg>

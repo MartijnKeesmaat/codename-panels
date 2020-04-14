@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../node_modules/zoom-vanilla.js/dist/zoom.css" rel="stylesheet" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body data-barba="wrapper">
@@ -22,33 +22,114 @@
           <div class="bar"></div>
           <div class="bar"></div>
         </div>
-    
+
         <div class="column">
           <div class="bar"></div>
           <div class="bar"></div>
         </div>
-    
+
         <div class="column">
           <div class="bar"></div>
           <div class="bar"></div>
         </div>
-    
+
         <div class="column">
           <div class="bar"></div>
           <div class="bar"></div>
         </div>
       </div>
 
-    <main data-barba="container" data-barba-namespace="home">
-      <h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, impedit! Adipisci inventore cum in quasi quibusdam voluptatem repellat aliquam neque, rerum
-        dolores voluptatum ex minus omnis quaerat magni doloribus maiores!
-      </h1>
-      <a href="/index.html">Linkie</a>
+      <a href="index.html">
+        <img src="assets/img/logo-dark.svg" class="letter-mark" />
+      </a>
+
+      <img src="assets/img/hamburger.svg" class="letter-mark" />
+    </header>
+
+    <main data-barba="container" data-barba-namespace="about">
+      <div class="grid">
+        <div class="grid-item">
+          <p>The</p>
+          <h1>Artic fox</h1>
+          <h2>Collected Photo's</h2>
+          <img src="assets/img/foxes/blurred.jpg" alt="" />
+        </div>
+
+        <div class="grid-item grid-item--img">
+          <div class="grid-item-overlay"></div>
+          <div class="test">
+            <img src="assets/img/foxes/1.jpg" alt="" data-action="zoom" />
+          </div>
+        </div>
+
+        <div class="grid-item grid-item--img">
+          <div class="grid-item-overlay"></div>
+          <div class="test">
+            <img src="assets/img/foxes/2.jpg" alt="" data-action="zoom" />
+          </div>
+        </div>
+
+        <div class="grid-item grid-item--img">
+          <div class="grid-item-overlay"></div>
+          <div class="test">
+            <img src="assets/img/foxes/3.jpg" alt="" data-action="zoom" />
+          </div>
+        </div>
+
+        <div class="grid-item grid-item--img">
+          <div class="grid-item-overlay"></div>
+          <div class="test">
+            <img src="assets/img/foxes/4.jpg" alt="" data-action="zoom" />
+          </div>
+        </div>
+
+        <div class="grid-item grid-item--img">
+          <div class="grid-item-overlay"></div>
+          <div class="test">
+            <img src="assets/img/foxes/5.jpg" alt="" data-action="zoom" />
+          </div>
+        </div>
+
+        <div class="grid-item grid-item--img">
+          <div class="grid-item-overlay"></div>
+          <div class="test">
+            <img src="assets/img/foxes/6.jpg" alt="" data-action="zoom" />
+          </div>
+        </div>
+
+        <div class="grid-item grid-item--img">
+          <div class="grid-item-overlay"></div>
+          <div class="test">
+            <img src="assets/img/foxes/1.jpg" alt="" data-action="zoom" />
+          </div>
+        </div>
+
+        <div class="grid-item grid-item--img">
+          <div class="grid-item-overlay"></div>
+          <div class="test">
+            <img src="assets/img/foxes/2.jpg" alt="" data-action="zoom" />
+          </div>
+        </div>
+
+        <div class="grid-item grid-item--img">
+          <div class="grid-item-overlay"></div>
+          <div class="test">
+            <img src="assets/img/foxes/3.jpg" alt="" data-action="zoom" />
+          </div>
+        </div>
+
+        <div class="grid-item grid-item--img">
+          <div class="grid-item-overlay"></div>
+          <div class="test">
+            <img src="assets/img/foxes/7.jpg" alt="" data-action="zoom" />
+          </div>
+        </div>
+      </div>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
     <script src="https://unpkg.com/@barba/core"></script>
-    <!-- <script type="module" src="./scriptje.js"></script> -->
+
+    <script src="../../node_modules/zoom-vanilla.js/dist/zoom-vanilla.min.js"></script>
   </body>
 </html>

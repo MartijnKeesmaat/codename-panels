@@ -48,6 +48,10 @@ function delay(n) {
 barba.init({
   sync: true,
 
+  to: {
+    namespace: ['home'],
+  },
+
   transitions: [
     {
       async leave(data) {
@@ -67,4 +71,28 @@ barba.init({
       },
     },
   ],
+});
+
+gsap.from('.grid-item:first-child', {
+  duration: 1.2,
+  autoAlpha: 0,
+  delay: 0.3,
+  y: 15,
+  ease: 'power2.out',
+});
+
+gsap.to('.grid-item-overlay', {
+  duration: 1.8,
+  y: '-100%',
+  delay: 0.3,
+  stagger: 0.2,
+  ease: 'power2.out',
+});
+
+gsap.to('.grid-item--img .test', {
+  duration: 1,
+  y: 0,
+  delay: 0.6,
+  stagger: 0.15,
+  ease: 'power2.out',
 });
