@@ -1,0 +1,43 @@
+$body-color: slateblue;
+
+body {
+  color: $body-color;
+
+  font-family: sans-serif;
+}
+
+body {
+  color: #fff;
+  background: #000;
+}
+
+li {
+  list-style: none;
+}
+
+ul.transition {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+
+  display: flex;
+
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+
+  pointer-events: none;
+}
+
+.transition li {
+  width: 20%;
+
+  transform: scaleY(0);
+
+  background: #fff;
+}
+
+ul {
+  padding: 0;
+}
