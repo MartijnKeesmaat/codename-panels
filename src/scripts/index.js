@@ -2,35 +2,38 @@ import '../styles/index.sass';
 import './pace.min.js';
 import './panels.js';
 
-console.log('webpack starterkit');
-
-// import * as gsap from './node_modules/gsap';
-
 function pageTransition() {
-  var tl = gsap.timeline();
-  tl.to('ul.transition li', {
-    duration: 0.5,
-    scaleY: 1,
-    transformOrigin: 'bottom left',
-    stagger: 0.2,
-  });
-  tl.to('ul.transition li', {
-    duration: 0.5,
-    scaleY: 0,
-    transformOrigin: 'bottom left',
-    stagger: 0.1,
-    delay: 0.1,
-  });
+  // var tl = gsap.timeline();
+  // tl.to('ul.transition li', {
+  //   duration: 0.5,
+  //   scaleY: 1,
+  //   transformOrigin: 'bottom left',
+  //   stagger: 0.2,
+  // });
+  // tl.to('ul.transition li', {
+  //   duration: 0.5,
+  //   scaleY: 0,
+  //   transformOrigin: 'bottom left',
+  //   stagger: 0.1,
+  //   delay: 0.1,
+  // });
 }
 
 function contentAnimation() {
   var tl = gsap.timeline();
-  // tl.from('main', {
-  //   duration: 1,
-  //   y: -20,
-  //   autoAlpha: 0,
-  //   delay: 0.3,
-  // });
+  gsap.to('.panel-overlay', {
+    duration: 1.8,
+    x: '100%',
+    delay: 0.3,
+    stagger: 0.2,
+  });
+
+  gsap.to('.panel-content', {
+    duration: 1,
+    x: 0,
+    delay: 0.6,
+    stagger: 0.15,
+  });
 }
 
 function delay(n) {
