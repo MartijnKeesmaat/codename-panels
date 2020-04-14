@@ -61,4 +61,14 @@ function expandPanel(e) {
     y: 0,
     duration: 3,
   });
+
+  gsap.to('.logo .bar', {
+    width: 3,
+    marginRight: 3,
+  });
+
+  gsap.to('.logo .column:first-child .bar', {
+    width: 26,
+    delay: 1,
+  });
 }
