@@ -8,6 +8,7 @@ $.panels.forEach((e) => e.addEventListener('click', expandPanel));
 
 function expandPanel(e) {
   const activePanel = e.currentTarget;
+  console.log(activePanel);
   // activePanel.classList.toggle('panel--expanded');
 
   $.panels.forEach((e) =>

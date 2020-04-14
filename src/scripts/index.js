@@ -1,22 +1,23 @@
 import '../styles/index.sass';
 import './pace.min.js';
 import './panels.js';
+import './loader.js';
 
 function pageTransition() {
-  // var tl = gsap.timeline();
-  // tl.to('ul.transition li', {
-  //   duration: 0.5,
-  //   scaleY: 1,
-  //   transformOrigin: 'bottom left',
-  //   stagger: 0.2,
-  // });
-  // tl.to('ul.transition li', {
-  //   duration: 0.5,
-  //   scaleY: 0,
-  //   transformOrigin: 'bottom left',
-  //   stagger: 0.1,
-  //   delay: 0.1,
-  // });
+  var tl = gsap.timeline();
+  tl.to('ul.transition li', {
+    duration: 0.5,
+    scaleX: 1,
+    transformOrigin: 'top left',
+    stagger: 0.2,
+  });
+  tl.to('ul.transition li', {
+    duration: 0.5,
+    scaleX: 0,
+    transformOrigin: 'top left',
+    stagger: 0.1,
+    delay: 0.1,
+  });
 }
 
 function contentAnimation() {
@@ -62,37 +63,76 @@ barba.init({
         done();
       },
 
-      async enter(data) {
-        contentAnimation();
+      async enter({ current, next, trigger }) {
+        if (next.namespace === 'home') {
+          contentAnimation();
+        } else if (next.namespace === 'about') {
+          contentAnimationGrid();
+        }
       },
 
-      async once(data) {
-        contentAnimation();
+      async once({ current, next, trigger }) {
+        console.log(next.namespace);
+        if (next.namespace === 'home') {
+          contentAnimation();
+        } else if (next.namespace === 'about') {
+          contentAnimationGrid();
+        }
       },
     },
   ],
 });
 
-gsap.from('.grid-item:first-child', {
-  duration: 1.2,
-  autoAlpha: 0,
-  delay: 0.3,
-  y: 15,
-  ease: 'power2.out',
-});
+// barba.init({
+//   sync: true,
 
-gsap.to('.grid-item-overlay', {
-  duration: 1.8,
-  y: '-100%',
-  delay: 0.3,
-  stagger: 0.2,
-  ease: 'power2.out',
-});
+//   to: {
+//     namespace: ['about'],
+//   },
 
-gsap.to('.grid-item--img .test', {
-  duration: 1,
-  y: 0,
-  delay: 0.6,
-  stagger: 0.15,
-  ease: 'power2.out',
-});
+//   transitions: [
+//     {
+//       async leave(data) {
+//         const done = this.async();
+
+//         pageTransition();
+//         await delay(1000);
+//         done();
+//       },
+
+//       async enter(data) {
+//         contentAnimationGrid();
+//       },
+
+//       async once(data) {
+//         contentAnimationGrid();
+//       },
+//     },
+//   ],
+// });
+
+function contentAnimationGrid() {
+  gsap.to('.grid-item:first-child', {
+    duration: 1.2,
+    autoAlpha: 1,
+    delay: 0.3,
+    y: 0,
+    ease: 'power2.out',
+  });
+
+  gsap.to('.grid-item-overlay', {
+    duration: 1.8,
+    y: '-100%',
+    delay: 0.3,
+    stagger: 0.2,
+    ease: 'power2.out',
+  });
+
+  gsap.to('.grid-item--img .test', {
+    duration: 1,
+    y: 0,
+    delay: 0.6,
+    stagger: 0.15,
+    ease: 'power2.out',
+  });
+}

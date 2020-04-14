@@ -1,0 +1,61 @@
+.loader
+  position: fixed
+  z-index: 11
+
+  display: flex
+  align-items: center
+  justify-content: center
+
+  width: 100vw
+  height: 100vh
+
+  background: #192326
+
+.loader-counter
+  position: relative
+
+  overflow: hidden
+
+  width: 150px
+  height: 161px
+
+  p
+    position: absolute
+
+    display: flex
+
+    margin-bottom: 0
+    padding-top: 5px
+
+    text-align: center
+
+    color: #FFFFFF
+    text-shadow: 0 0 46px rgba(255,255,255,0.14)
+
+    font-family: TuskerGrotesk4500Medium
+    font-size: 16.2rem
+    line-height: 1
+
+    &:first-of-type
+      span
+        transform: translateY(0)
+
+    span
+      display: inline-block
+
+      transform: translateY(120%)
+
+.loader
+  transform: translateY(100%)
+
+  h3
+    margin-top: 15px
+
+    text-align: center
+    text-transform: uppercase
+
+    opacity: 0.6
+    color: #FFFFFF
+
+    font-family: TuskerGrotesk3500Medium
+    font-size: 2rem
